@@ -8,7 +8,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Hakam Koubaa's Terminal</title>
-        <meta name="description" content="Hakam Koubaa's interactive terminal experience." />
+        <meta name="description" content="Hakam Koubaa&apos;s interactive terminal experience." />
       </Head>
 
       <header className={styles.header}>
