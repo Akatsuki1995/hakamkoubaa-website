@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   async headers() {
     return [
@@ -21,4 +22,20 @@ module.exports = {
       },
     ];
   },
+  // ADD THIS REWRITES CONFIGURATION
+  async rewrites() {
+    return [
+      {
+        source: '/portfolio', // The URL path you want to expose (what the user types)
+        destination: '/static-portfolio/index.html', // The actual path to your static index.html in public
+      },
+      {
+        source: '/portfolio/:path*', // For all assets within the static site
+        destination: '/static-portfolio/:path*', // Map them to the correct static asset location
+      },
+
+    ];
+  },
 };
+
+module.exports = nextConfig;

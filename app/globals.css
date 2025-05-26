@@ -46,7 +46,7 @@ body {
 }
 
 body {
-  background-image: url('/assets/img/Wallpaper_Hacker1.png');
+  background-image: url('/static-portfolio/assets/img/Wallpaper_Hacker1.png');
   /* Replace with your image path */
   background-size: cover;
   /* Scales the image to cover the entire area */
