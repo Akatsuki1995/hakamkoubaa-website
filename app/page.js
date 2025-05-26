@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Hakam Koubaa's Terminal</title>
+        <title>Hakam Koubaa&apos;s Terminal</title>
         <meta name="description" content="Hakam Koubaa&apos;s interactive terminal experience." />
       </Head>
 
