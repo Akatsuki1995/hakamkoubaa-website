@@ -1,0 +1,30 @@
+{
+    "headers": [
+        {
+            "source": "/cv/en",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/pdf"
+                },
+                {
+                    "key": "Content-Disposition",
+                    "value": "attachment; filename=\"hakamkoubaa_resume_en.pdf\""
+                }
+            ]
+        },
+        {
+            "source": "/cv/fr",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/pdf"
+                },
+                {
+                    "key": "Content-Disposition",
+                    "value": "attachment; filename=\"hakamkoubaa_resume_fr.pdf\""
+                }
+            ]
+        }
+    ]
+}

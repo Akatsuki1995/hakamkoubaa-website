@@ -31,7 +31,15 @@ const nextConfig = {
       },
       {
         source: '/portfolio/:path*', // For all assets within the static site
-        destination: '/static-portfolio/:path*', // Map them to the correct static asset location
+        destination: '//:path*', // Map them to the correct static asset location
+      },
+      {
+        source: '/cv/en',
+        destination: '/static-portfolio/assets/CV/Hakam_Koubaa_CV_EN.pdf',
+      },
+      {
+        source: '/cv/fr',
+        destination: '/static-portfolio/assets/CV/Hakam_Koubaa_CV_FR.pdf',
       },
 
     ];
