@@ -15,7 +15,7 @@ export default function HomePage() {
             <div className={styles.container}>
                 <header className={styles.header}>
                     <h1>Welcome to my personal website</h1>
-                    <p>I'm Hakam Koubaa — engineer, builder, and blockchain enthusiast.</p>
+                    <p>I&apos;m Hakam Koubaa — engineer, builder, and blockchain enthusiast.</p>
                 </header>
 
                 <main className={styles.main}>
