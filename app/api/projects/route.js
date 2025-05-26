@@ -1,70 +1,81 @@
 export async function GET(request) {
   const projects = [
+    // Cybersecurity Projects
     {
-      name: "Liberty: Experience the ISS like never before.",
+      name: "Python Malware Toolkit",
       description:
-        "A browser based 3D visualisation of the International Space Station in Realtime which won us second place in the NASA Space Apps Regional Round among 90+ teams.",
-      stack: ["Typescript", "NextJS", "Rust", "WASM"],
-      link: "https://space-apps-eosin.vercel.app",
-      image: "ndss.png",
-      largeImage: "liberty-lg.png",
+        "A Python-based malware framework for educational purposes. Includes modules for data exfiltration, process injection, and anti-analysis techniques.",
+      stack: ["Python", "Socket", "cryptography"],
+      link: "https://github.com/Akatsuki1995/Malware_Python",
+      image: "malware_python.png",
     },
     {
-      name: "New Delhi Space Society Website",
+      name: "PKI Infrastructure Setup",
       description:
-        "I designed and developed New Delhi Space Society’s Website - A chapter of the National Space Society",
-      stack: ["Typescript", "NextJS"],
-      link: "https://new-delhi-space-society.github.io/",
-      image: "ndss.png",
-      largeImage: "ndss-lg.png",
+        "Designed and implemented a full Public Key Infrastructure (PKI) using OpenSSL. Includes CA hierarchy, certificate issuance, revocation lists, and automation scripts.",
+      stack: ["OpenSSL", "Bash", "Shell Scripting"],
+      link: "https://github.com/Akatsuki1995/PKI_Infrastructure",
+      image: "pki.png",
     },
     {
-      name: "Wunderkind - DPS Goethe Quiz",
+      name: "Private Blockchain Internship",
       description:
-        "Helped in creating a platform (website) for a quiz conducted by Goethe Institut in collaboration DPS Society. The platform was used by over 9000 students in 2 iterations of the quiz and boasted a 99% availability rating. The platform was orchestrated at minimal cost to the operators and used cutting-edge web technology.",
-      stack: ["PHP", "Laravel", "Typescript", "ReactJS"],
-      link: "https://dpsgoethequiz.com",
-      image: "cognizer.png",
+        "Final-year internship project building a private blockchain for supply chain traceability. Implemented consensus mechanisms, smart contract modules, and network deployment.",
+      stack: ["Go", "Docker", "Hyperledger Fabric"],
+      link: "https://github.com/Akatsuki1995/Private-Blockchain-Internship",
+      image: "private_blockchain.png",
+    },
+
+    // Blockchain Projects
+    {
+      name: "NFT Collection Management",
+      description:
+        "Created and managed multiple NFT collections on Ethereum, handling on-chain minting, metadata storage on IPFS, and marketplace integration.",
+      stack: ["Solidity", "Hardhat", "IPFS", "JavaScript"],
+      link: "https://github.com/Akatsuki1995/NFT-Collections",
+      image: "nft_collection.png",
     },
     {
-      name: "Cognizer",
+      name: "On-Chain / Off-Chain Data Oracle",
       description:
-        "A Chrome Extension that allows you to connect with people during and also soon after the conference or meet ends. Second Runner's up at Code Warriors soBig.s Hackathon 2021",
-      stack: ["Javascript", "NodeJS", "Adonis", "Chrome Extension API"],
-      link: "https://cognizer.kavin.me/",
-      image: "cognizer.png",
+        "Built a secure oracle service fetching real-world data off-chain and feeding it into smart contracts via a Chainlink-compatible architecture.",
+      stack: ["Node.js", "Chainlink", "Express", "Rust"],
+      link: "https://github.com/Akatsuki1995/Data-Oracle",
+      image: "data_oracle.png",
     },
     {
-      name: "Sudocrypt v11.0",
+      name: "Decentralized Voting DApp",
       description:
-        "I developed the platform for Sudocrypt v11.0, a cryptic hunt organized by Exun Clan. It had over 1.5k participants and more than 50k attempts over the course of two days.",
-      stack: ["PHP", "Laravel", "Typescript", "ReactJS"],
-      link: "https://github.com/kavinvalli/sudocrypt-v11",
-      image: "sudocrypt.png",
+        "A voting application with on-chain vote recording and off-chain identity verification, ensuring transparency and tamper resistance.",
+      stack: ["React", "Solidity", "Web3.js", "IPFS"],
+      link: "https://github.com/Akatsuki1995/Decentralized-Voting",
+      image: "voting_dapp.png",
+    },
+
+    // Future Blue Team & SIEM Projects
+    {
+      name: "Advanced SIEM Analytics Platform (Future)",
+      description:
+        "A next-generation SIEM analytics platform leveraging machine learning to detect anomalous patterns in event logs, streamline incident triage, and generate actionable alerts.",
+      stack: ["Python", "Elasticsearch", "Kibana", "TensorFlow"],
+      link: "",
+      image: "future_siem.png",
     },
     {
-      name: "CBSE Rebrand",
+      name: "Automated Log Aggregation Service (Future)",
       description:
-        "Rebranded CBSE Platform made using AdonisJS for CORE 2021. Creative Winners",
-      stack: ["Javascript", "NodeJS", "Adonis"],
-      link: "https://github.com/kavinvalli/core-cbse-rebrand-2021",
-      image: "cbse.png",
+        "A scalable service for collecting, normalizing, and correlating logs from diverse sources (endpoints, servers, cloud) to support real-time threat detection.",
+      stack: ["Go", "Fluentd", "Kafka", "Elastic Stack"],
+      link: "",
+      image: "future_log_aggregation.png",
     },
     {
-      name: "Discord Task Manager Bot",
+      name: "Threat Intelligence Dashboard (Future)",
       description:
-        "A Task Manager Bot you can add to your discord servers (created with the help of the Discord API)",
-      stack: ["Javascript", "NodeJS"],
-      link: "https://task-manager-bot.github.io",
-      image: "task-bot.png",
-    },
-    {
-      name: "Cricket VSCode Extension",
-      description:
-        "A VSCode Extension to show Cricket News and LiveScores from inside the editor",
-      stack: ["Javascript"],
-      link: "https://github.com/kavin25/cricket-vscode-extension",
-      image: "cricket-vscode.png",
+        "An interactive dashboard aggregating threat intelligence feeds, visualizing attack trends, and providing SOC analysts with contextual enrichment for faster response.",
+      stack: ["React", "Node.js", "MongoDB", "GraphQL"],
+      link: "",
+      image: "future_threat_dashboard.png",
     },
   ];
 

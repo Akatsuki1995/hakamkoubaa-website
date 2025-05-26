@@ -27,14 +27,9 @@ const COMMANDS = [
     command: "blog",
     description: "Visit my blog",
   },
+
   {
-    command: "youtube",
-    description: "Visit my youtube channel (@livecode247)",
-  },
-  {
-    command:
-      // 'clear <span style="color: var(--primary)">(Ctrl+L shortcut)</span>',
-      "clear",
+    command: "clear",
     description: "Clear terminal",
   },
 ];
@@ -46,9 +41,7 @@ const getProjects = async () => {
     projects
       .map(
         (project) => `<div class="command">
-        <a href="${project.link}" target="_blank"><b class="command">${
-          project.name
-        }</b></a> - <b>${project.stack.join(", ")}</b>
+        <a href="${project.link}" target="_blank"><b class="command">${project.name}</b></a> - <b>${project.stack.join(", ")}</b>
         <p class="meaning">${project.description}</p>
       </div>`
       )
@@ -78,52 +71,106 @@ export const CONTENTS = {
     ).join("") +
     `<br />
       <div class="command">Type one of the above to view. For eg. <span style="color: var(--secondary)">about</span></div>`,
-  about: () => `My name is Kavin. I am ${getAge(
-    "December 25, 2005"
-  )} and I\'m a fullstack web developer
-    <br/><br/>
-    I love coding in Javascript, Typescript and Python, and have worked with frameworks like ReactJS, VueJS, Express, and Django. I currently use NextJS, Laravel, and NodeJS in a lot of my projects.
-    <br /><br />
-    I am a former President of <a href="https://exunclan.com" target="_blank">Exun Clan</a> ('22-23). I am a freshman at <a href="https://uwaterloo.ca/content/home" target="_blank">University of Waterloo</a>.
-    <br />
-    I am also the Chapter Officer at the <a href="https://new-delhi-space-society.github.io" target="_blank">New Delhi Space Society</a>, a chapter of the <a href="https://space.nss.org" target="_blank">National Space Society</a>. I am a core maintainer of <a href="https://typewind.vercel.app" target="_new">Typewind</a>
-  `,
-  education:
-    () => `I am a high school graduate from <a href="https://dpsrkp.net" target="_blank">Delhi Public School, R.K. Puram</a> and a freshman at <a href="https://uwaterloo.ca/content/home" target="_blank">University of Waterloo</a>.`,
-  skills: () => `
-  I am experienced with Javascript, Typescript and Python and the web technologies dominating at the time:<br />
-  <div class="skill"><b>core</b>: HTML, CSS, Node.js and PHP<br /></div>
-  <div class="skill"><b>frameworks</b>: React, NextJS, Django, Express and Laravel<br /></div>
-  <div class="skill"><b>database</b>: MongoDB, PostgreSQL, MySQL, and SQLite<br /></div>
-  I also have knowledge of basic shell scripting and my dotfiles can be found <a href="https://github.com/kavinvalli/.dotfiles" target="_blank">here</a>.
-<br /><br />
-  I also have experience with Mobile Development with Flutter.
-  `,
+
+
+  about: (write) => {
+    const text = `<div>Hi, I'm Mohamed Hakam KOUBAA — a ${getAge("August 15, 1997")}-year-old Master's student in Cybersecurity & Cloud Computing at IPSSI, France.</div>
+
+<div>🌍 <strong>Roots & Education:</strong> I grew up in Tunisia, where I developed a passion for technology and security, and earned my Engineering Degree in Computer Networks.</div>
+
+<div>🔐 <strong>Blockchain & Security Foundation:</strong> My early work in blockchain introduced me to cryptography and distributed systems—knowledge I now apply to modern security challenges.</div>
+
+<div>💼 <strong>From Business to Cyber Defense:</strong> Growing up in a family of entrepreneurs taught me resilience, adaptability, and leadership—skills I leverage in securing infrastructures.</div>
+
+<div>💻 <strong>Technical Skills:</strong> Proficient in JavaScript, Python, and Solidity, with hands-on experience in secure development and system analysis.</div>
+
+<div>🛡️ <strong>Blue Team Focus:</strong> Specializing in defensive security—system hardening, threat detection, vulnerability management, and incident response.</div>
+
+<div>📚 <strong>Current Goals:</strong> Mastering SOC workflows, cybersecurity consulting, and cloud security to build robust defense strategies.</div>
+
+<div>🔍 <strong>Seeking Opportunities:</strong> Actively looking for an apprenticeship in France (Blue Team, SOC, or security consulting roles). <br>Let’s connect!</div>
+
+`.trim();
+
+    return (async () => {
+      for (const char of text) {
+        write(char);
+        // ~20 ms per character gives a smooth, human‐like typing feel
+        await new Promise((res) => setTimeout(res, 10));
+      }
+    })();
+  },
+  education: (write) => {
+    const text = `  
+  <div>🎓 <strong>Engineering Degree in Networks & Telecommunications</strong></div>
+  <div>I earned my engineering degree from a top institution in Tunisia, specializing in computer networks, telecommunication systems, and IT infrastructure.</div>
+  <div>My training included advanced networking concepts, protocol analysis, and system administration, giving me a solid technical foundation.</div>
+
+  <br/>
+
+  <div>🎓 <strong>Master's in Cybersecurity & Cloud Computing</strong></div>
+  <div>I’m currently pursuing a Master’s degree at <a href="https://ecole-ipssi.com" target="_blank">IPSSI, Paris</a>, focusing on cybersecurity operations and secure cloud architecture.</div>
+  <div>This program emphasizes Blue Team skills, incident response, vulnerability management, and cloud service security across AWS and GCP environments.</div>
+  <div>It also includes hands-on labs, capture-the-flag (CTF) challenges, and real-world threat detection workflows.</div>
+`.trim();
+
+    return (async () => {
+      for (const char of text) {
+        write(char);
+        // ~20 ms per character gives a smooth, human‐like typing feel
+        await new Promise((res) => setTimeout(res, 10));
+      }
+    })();
+  },
+  skills: (write) => {
+    const text = `
+<div class="skill"><b>SOC / Blue Team</b>: Splunk, Wazuh/Elastic SIEM, MITRE ATT&CK, Threat Hunting, Playbooks NIST/ANSSI, CrowdStrike/SentinelOne, CTFs (HackTheBox, TryHackMe), PKI, VPN</div>
+
+<div class="skill"><b>Network & Forensics</b>: Wireshark, Suricata/Zeek, Autopsy/FTK, Forensic Analysis</div>
+
+<div class="skill"><b>Cloud & SecOps</b>: AWS, Google Cloud Platform (GCP), Docker Security, ISO 27001/GDPR, CI/CD Pipelines (Infrastructure as Code)</div>
+
+<div class="skill"><b>Automation & Development</b>: Python (IR, Malware), Bash/PowerShell, JavaScript, Git/CI-CD, Node.js/Express/Next.js</div>
+
+<div class="skill"><b>Tools</b>: Linux, Postman, Git, Docker, Hardhat/Ganache (blockchain dev)</div>
+  `.trim();
+
+    return (async () => {
+      for (const char of text) {
+        write(char);
+        // ~20 ms per character gives a smooth, human‐like typing feel
+        await new Promise((res) => setTimeout(res, 10));
+      }
+    })();
+  },
+
   projects: getProjects,
+
   contact: getContacts,
+
   resume: () => {
-    window.open("https://kavin.me/resume.pdf", "_blank");
+    const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    window.open(`${baseURL}/Resume_HakamKoubaa.pdf`, "_blank");
     return "";
   },
+
+
   error: (input) =>
     `<div class="help-command">sh: Unknown command: ${input}</div><div class="help-command">See \`help\` for info`,
+
   blog: () => {
-    window.open("https://livecode247.com", "_blank");
+    window.open("https://hackernoon.com/u/akatsuki1995", "_blank"); // Replace if needed
     return "";
   },
-  youtube: () => {
-    window.open("https://youtube.com/@livecode247", "_blank");
-    return "";
-  },
+
+
 };
 
 function getAge(dateString) {
   const today = new Date();
   const birthDate = new Date(dateString);
-
   let age = today.getFullYear() - birthDate.getFullYear();
   const m = today.getMonth() - birthDate.getMonth();
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--;
-
   return age;
 }

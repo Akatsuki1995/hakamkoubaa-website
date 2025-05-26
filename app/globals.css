@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --text-color: #a9b1d6;
-  --primary: #bb9af7;
-  --secondary: #2ac3de;
-  --background-color: #1a1b26;
+  --text-color: #E0E0E0;
+  --primary: #E0E0E0;
+  --secondary: #E0E0E0;
+  --background-color: #121212;
 }
 
 html,
@@ -43,6 +43,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body {
+  background-image: url('/assets/img/Wallpaper_Hacker1.png');
+  /* Replace with your image path */
+  background-size: cover;
+  /* Scales the image to cover the entire area */
+  background-position: center center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  background-attachment: fixed;
+  /* Makes the background fixed while scrolling (parallax effect). Use 'scroll' if you want it to scroll with content. */
+
+  /* Fallback background color (from your variables) in case the image doesn't load or while it's loading */
+  background-color: var(--background-color);
+
+  /* Ensure text is readable over the background */
+  color: var(--text-color);
+  min-height: 100vh;
+  /* Ensure body takes at least full viewport height */
+  margin: 0;
+  /* Reset default margin */
 }
 
 h1 {
